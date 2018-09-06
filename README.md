@@ -15,3 +15,9 @@ Saber utilizar PHPMyAdmin.
 
 MVP del proyecto: alguién que quiera hacer una consulta a un api desde algún endpoint, que quiera recibir una respuesta rápida y 
 confiable del contenido y las url's de artículos de NY Times.
+
+Segunda entrega del proyecto.
+
+Se utilizó Flask para que el script de python pudiera ser convertido en un RESTful API. A partir del método GET, se llama a la clase Search o History del programa. Con la sintaxis: http://127.0.0.1:5000/search/kwd1/kwd2/tkn y http://127.0.0.1:5000/history/tkn respectivamente. Se implementó un token individual para poder identificar a cada usuario que realize a busqueda. Al momento de hacer la búsqueda a cualquiera de las 2 clases, se crea un log de la búsqueda, con el cual logstash recopila la información para la inserción a ELK. Se continuó usando el API de New York Times y la instancia de MySQL alojada en el servidor de XAMPP para las búsquedas .
+
+Implementar ELK al proyecto: Se configuró Elastic Cloud con AWS para recibir la información a travéz de un pipeline de Logstash, insertandolo a Elasticsearch y para poder visualizar la actividad en Kibana. 
